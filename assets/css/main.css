@@ -334,7 +334,8 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 12pt;
+				letter-spacing: .12em;
 			}
 
 		}
@@ -393,7 +394,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: #f7f1e3;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -494,7 +495,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.5);
+		color: #f7f1e3;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
