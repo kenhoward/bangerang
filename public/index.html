@@ -6,7 +6,7 @@
     <title>Welcome to Firebase Hosting</title>
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.7.2/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.7.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/5.7.2/firebase-auth.js"></script>
     <script defer src="/__/firebase/5.7.2/firebase-database.js"></script>
@@ -14,6 +14,23 @@
     <script defer src="/__/firebase/5.7.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script>
+			var config = {
+				apiKey: "AIzaSyCEj9uA4LjoTpK2ceWyQO_ZQ46y4f928KQ",
+				authDomain: "test-123-60bf8.firebaseapp.com",
+				databaseURL: "https://test-123-60bf8.firebaseio.com",
+				projectId: "test-123-60bf8",
+				storageBucket: "test-123-60bf8.appspot.com",
+				messagingSenderId: "936674159373"
+			};
+			firebase.initializeApp(config);
+
+			var load = document.getElementById('load');
+			var dbRef = firebase.database().ref().child('text');
+			dbRef.on('value', snap => load.innerHTML = snap.val());
+		</script>
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
